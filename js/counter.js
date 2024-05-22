@@ -1,14 +1,14 @@
-// Находим элементы счетчика карточки товаров 
-const btnMinus = document.querySelector('[data-action="minus"]');
-const btnPlus = document.querySelector('[data-action="plus"]');
-const counter = document.querySelector('[data-counter]')
+//ловим клики по минусу/плюсу
+window.addEventListener('click', (event) => {
+  if(event.target.dataset.action === "plus" || event.target.dataset.action === "minus"){
+  const counterWrapper = event.target.closest(".counter-wrapper");
+  const counter = counterWrapper.querySelector('[data-counter]')
 
-// Клик на кнопку - и +
-btnMinus.addEventListener('click', () => {
-  parseInt(counter.innerText) > 1 ? --counter.innerText : 1;
-})
-
-btnPlus.addEventListener('click', () => {
-  counter.innerText = ++counter.innerText;
+  if(event.target.dataset.action === "plus") {
+    counter.innerText = ++counter.innerText;
+  }
+  if(event.target.dataset.action === "minus") {
+    parseInt(counter.innerText) > 1 ? --counter.innerText : 1;
+  }}
 })
 
