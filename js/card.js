@@ -46,7 +46,13 @@ window.addEventListener('click', (event) => {
         </div>
       `
   
-  cartWrapper.insertAdjacentHTML("beforeend", cartItemSample)
-  }}
+      cartWrapper.insertAdjacentHTML("beforeend", cartItemSample)
+
+      
+    }
+    card.querySelector('[data-counter]').innerText = '1'
+    //отображение статуса корзины при добавлении/удалении товара
+    basketStatus();
+  }
 })
 
