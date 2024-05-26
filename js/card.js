@@ -47,12 +47,12 @@ window.addEventListener('click', (event) => {
       `
   
       cartWrapper.insertAdjacentHTML("beforeend", cartItemSample)
-
-      
     }
-    card.querySelector('[data-counter]').innerText = '1'
+    card.querySelector('[data-counter]').innerText = '1';
     //отображение статуса корзины при добавлении/удалении товара
     basketStatus();
+
+    calcCartPrice()
   }
 })
 

@@ -1,9 +1,11 @@
 //ловим клики по минусу/плюсу
 window.addEventListener('click', (event) => {
+  let counter; 
+
   if(event.target.dataset.action === "plus" || event.target.dataset.action === "minus"){
   const counterWrapper = event.target.closest(".counter-wrapper");
-  const counter = counterWrapper.querySelector('[data-counter]')
-
+  counter = counterWrapper.querySelector('[data-counter]')
+  }
   if(event.target.dataset.action === "plus") {
     counter.innerText = ++counter.innerText;
   }
@@ -15,7 +17,11 @@ window.addEventListener('click', (event) => {
       event.target.closest(".cart-item").remove();
 
       basketStatus()
+      calcCartPrice()
     } 
   } 
-}
+
+  if (event.target.hasAttribute('data-action') && event.target.closest('.cart-wrapper')) {
+    calcCartPrice()
+  }
 })
