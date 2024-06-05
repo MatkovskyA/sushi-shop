@@ -52,7 +52,7 @@ window.addEventListener('click', (event) => {
     //отображение статуса корзины при добавлении/удалении товара
     basketStatus();
 
-    calcCartPrice()
+    calcCartPriceAndDelivery()
   }
 })
 

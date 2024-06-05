@@ -1,7 +1,6 @@
 const cartEmpty = document.querySelector("[data-cart-empty]")
 const orderForm = document.querySelector("#order-form");
 
-
 const getCartEmpty = () => {
   cartEmpty.classList.add('none');
   orderForm.classList.remove('none');
