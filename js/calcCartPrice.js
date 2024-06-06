@@ -33,7 +33,6 @@ function calcCartPriceAndDelivery() {
   });
 
   finalPrice.innerText = totalPrice;
-  console.log(finalPrice.innerText)
 
   if(totalPrice > 0) {
     cartDelivery.classList.remove('none')
